@@ -1,6 +1,4 @@
-# omron-fins-go
-
-[![Build Status](https://travis-ci.org/hiroeorz/omron-fins-go.svg?branch=master)](https://travis-ci.org/hiroeorz/omron-fins-go)
+# omron-fins-go [![Build Status](https://travis-ci.org/hiroeorz/omron-fins-go.svg?branch=master)](https://travis-ci.org/hiroeorz/omron-fins-go)
 
 ## About
 
