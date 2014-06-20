@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/hiroeorz/fins"
+	"github.com/hiroeorz/omron-fins-go/fins"
 	"log"
 )
 

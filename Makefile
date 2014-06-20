@@ -1,18 +1,17 @@
 .PHONY: test
 
 GO=go
-GITHUB=github.com/hiroeorz/omron-fins-go
-PACKAGE=github.com/hiroeorz/fins
+PACKAGE=github.com/hiroeorz/omron-fins-go/fins
 GOOS=linux
 GOARCH=arm
 GOARM=5
 
-all: get build
+all: get install
 
 get:
-	${GO} get ${GITHUB}/fins
+	${GO} get ${PACKAGE}
 
-build:
+install:
 	${GO} install ${PACKAGE}
 
 arm:
