@@ -1,7 +1,7 @@
 .PHONY: test
 
 GO=go
-PACKAGE=github.com/hiroeorz/fins
+PACKAGE=github.com/hiroeorz/omron-fins-go/fins
 GOOS=linux
 GOARCH=arm
 GOARM=5
