@@ -6,7 +6,7 @@ import (
 )
 
 func readDMCom(header *FinsHeader, ioFacility uint8, startAddress uint16,
-	readCount uint8) []byte {
+	readCount uint16) []byte {
 
 	if ioFacility != 0x82 && ioFacility != 0x02 {
 		panic(fmt.Sprintf("invalid ioFacility: %d\n", ioFacility))
@@ -41,9 +41,9 @@ func parseReadDM(bytes []byte) ([]uint16, error) {
 	body := bytes[14:]
 	var result []uint16
 
-	for i := 0; i < (len(body) / 2); i++ {
-		var upper uint16 = (uint16(body[i*2]) << 8)
-		var lower uint16 = uint16(body[i*2+1])
+	for i := 0; i < len(body); i += 2 {
+		upper := (uint16(body[i]) << 8)
+		lower := uint16(body[i + 1])
 		result = append(result, (upper | lower))
 	}
 

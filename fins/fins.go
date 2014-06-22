@@ -15,7 +15,7 @@ type ReqCommand struct {
 
 // ReadIO get uint16 values from PLC DM Areas.
 func ReadDM(listenChan chan *ReqCommand,
-	srcAddr string, dstAddr string, startAddr uint16, readCount uint8) ([]uint16, error) {
+	srcAddr string, dstAddr string, startAddr uint16, readCount uint16) ([]uint16, error) {
 
 	header := newHeader(srcAddr, dstAddr)
 	command := readDMCom(header, 0x82, startAddr, readCount)
